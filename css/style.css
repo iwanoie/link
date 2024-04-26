@@ -1,0 +1,140 @@
+/* 共通設定 */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html,body {
+	height: 100%;
+	width: 100%;
+}
+ul li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/* フォント */
+body {
+	font-family: "Cabin", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+
+/* スタイル */
+.container {
+	height: 100%;
+	background-color: rgb(250, 215, 180);
+}
+
+/* 画像の共通設定 */
+.img-size {
+	position: absolute;
+}
+.img-size img {
+	height: auto;
+}
+/* 画像位置指定 */
+/* img-1:ロゴ */
+.img-1 {
+	top: 6%;
+	left: 6%;
+}
+.img-1 img {
+	width: 180px;
+}
+/* img-2:犬 */
+.img-2 {
+	bottom: 50px;
+	left: -10px;
+}
+.img-2 img {
+	width: 200px;
+}
+/* img-3:桃花 */
+.img-3 {
+	bottom: 0px;
+	right: 40px;
+}
+.img-3 img {
+	width: 100px;
+}
+/* img-4:白花 */
+.img-4 {
+	bottom: 0px;
+	right: 0px;
+}
+.img-4 img {
+	width: 75px;
+}
+/* img-5:青花 */
+.img-5 {
+	bottom: 0px;
+	left: 0px;
+}
+.img-5 img {
+	width: 110px;
+}
+/* img-6:ライトA */
+.img-6 {
+	right: 1%;
+}
+.img-6 img {
+	width: 50px;
+}
+/* img-7:ライトB */
+.img-7 {
+	top: 25%;
+	right: 0px;
+}
+.img-7 img {
+	width: 120px;
+}
+
+/* リンク */
+.obj-link p {
+	color: rgb(2, 177, 86);
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-align: center;
+	width: 200px;
+}
+.link-item {
+	position: absolute;
+	box-shadow: 0px 4px 0px 6px rgb(2, 177, 86);
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px 10px;
+}
+.link-1 {
+	top: 38%;
+	right: 8%;
+}
+.link-2 {
+	top: 47%;
+	left: 12%;
+}
+.link-3 {
+	top: 56%;
+	right: 12%;
+}
+.link-4 {
+	top: 65%;
+	left: 8%;
+}
+.obj-2 {
+	height: 70vh;
+	background-color: yellowgreen;
+}
+
+/* footer */
+.footer {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, 0);
+	color: darkcyan;
+}

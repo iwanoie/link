@@ -44,13 +44,28 @@ body {
 .img-1 img {
 	width: 180px;
 }
+@media screen and (min-width: 768px) {
+	.img-1 img {
+		width: 250px;
+	}
+}
 /* img-2:犬 */
 .img-2 {
 	bottom: 50px;
 	left: -10px;
 }
+@media screen and (min-width: 768px) {
+	.img-2 {
+		bottom: 80px;
+	}
+}
 .img-2 img {
 	width: 200px;
+}
+@media screen and (min-width: 768px) {
+	.img-2 img {
+		width: 280px;
+	}
 }
 /* img-3:桃花 */
 .img-3 {
@@ -60,6 +75,11 @@ body {
 .img-3 img {
 	width: 100px;
 }
+@media screen and (min-width: 768px) {
+	.img-3 img {
+		width: 150px;
+	}
+}
 /* img-4:白花 */
 .img-4 {
 	bottom: 0px;
@@ -67,6 +87,11 @@ body {
 }
 .img-4 img {
 	width: 75px;
+}
+@media screen and (min-width: 768px) {
+	.img-4 img {
+		width: 100px;
+	}
 }
 /* img-5:青花 */
 .img-5 {
@@ -76,12 +101,22 @@ body {
 .img-5 img {
 	width: 110px;
 }
+@media screen and (min-width: 768px) {
+	.img-5 img {
+		width: 160px;
+	}
+}
 /* img-6:ライトA */
 .img-6 {
 	right: 1%;
 }
 .img-6 img {
 	width: 50px;
+}
+@media screen and (min-width: 768px) {
+	.img-6 img {
+		width: 80px;
+	}
 }
 /* img-7:ライトB */
 .img-7 {
@@ -90,6 +125,11 @@ body {
 }
 .img-7 img {
 	width: 120px;
+}
+@media screen and (min-width: 768px) {
+	.img-7 img {
+		width: 170px;
+	}
 }
 
 /* リンク */
@@ -100,6 +140,13 @@ body {
 	letter-spacing: 2px;
 	text-align: center;
 	width: 200px;
+}
+@media screen and (min-width: 768px) {
+	.obj-link p {
+		font-size: 20px;
+		letter-spacing: 3px;
+		width: 250px;
+		}
 }
 .link-item {
 	position: absolute;
@@ -112,21 +159,46 @@ body {
 	top: 38%;
 	right: 8%;
 }
+@media screen and (min-width: 768px) {
+	.link-1 {
+		right: 30%;
+	}
+}
 .link-2 {
 	top: 47%;
 	left: 12%;
+}
+@media screen and (min-width: 768px) {
+	.link-2 {
+		left: 34%;
+	}
 }
 .link-3 {
 	top: 56%;
 	right: 12%;
 }
+@media screen and (min-width: 768px) {
+	.link-3 {
+		right: 34%;
+	}
+}
 .link-4 {
 	top: 65%;
 	left: 8%;
 }
+@media screen and (min-width: 768px) {
+	.link-4 {
+		left: 30%;
+	}
+}
 .obj-2 {
 	height: 70vh;
 	background-color: yellowgreen;
+}
+@media screen and (min-width: 768px) {
+	.obj-2 {
+		height: 75vh;
+	}
 }
 
 /* footer */

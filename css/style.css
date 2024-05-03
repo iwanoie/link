@@ -24,7 +24,7 @@ body {
 
 /* スタイル */
 .container {
-	height: 100%;
+	height: auto;
 	background-color: rgb(250, 215, 180);
 }
 
@@ -161,7 +161,12 @@ body {
 }
 @media screen and (min-width: 768px) {
 	.link-1 {
-		right: 30%;
+		right: 25%;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.link-1 {
+		right: 32%;
 	}
 }
 .link-2 {
@@ -170,7 +175,12 @@ body {
 }
 @media screen and (min-width: 768px) {
 	.link-2 {
-		left: 34%;
+		left: 29%;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.link-2 {
+		left: 36%;
 	}
 }
 .link-3 {
@@ -179,7 +189,12 @@ body {
 }
 @media screen and (min-width: 768px) {
 	.link-3 {
-		right: 34%;
+		right: 29%;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.link-3 {
+		right: 36%;
 	}
 }
 .link-4 {
@@ -188,25 +203,50 @@ body {
 }
 @media screen and (min-width: 768px) {
 	.link-4 {
-		left: 30%;
+		left: 25%;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.link-4 {
+		left: 32%;
 	}
 }
 .obj-2 {
-	height: 70vh;
+	height: 100vh;
 	background-color: yellowgreen;
 }
+.obj-3 {
+	height: 65vh;
+	padding: 5vh 15px 0 15px;
+}
 @media screen and (min-width: 768px) {
-	.obj-2 {
-		height: 75vh;
+	.obj-3 {
+		height: 65vh;
+		padding: 15vh 15px 0 15px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.obj-3 {
+		height: 70vh;
+		padding: 10vh 15px 0 15px;
 	}
 }
 
 /* footer */
-.footer {
+footer {
+	height: 20vh;
+	position: relative;
+}
+.footer-img {
+	position: absolute;
+}
+.footer-img img {
+	height: auto;
+}
+.copyright {
 	position: absolute;
 	bottom: 0px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, 0);
+	width: 100%;
+	text-align: center;
 	color: darkcyan;
 }

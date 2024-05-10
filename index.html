@@ -35,6 +35,11 @@
 	</script>
 </head>
 <body>
+	<!-- ローディング表示 -->
+	<div id="splash">
+		<div id="splash_text"></div>
+	</div>
+
 	<div class="container">
 
 		<div class="contents">
@@ -48,6 +53,16 @@
 				<div class="img-size img-7">
 					<img src="images/07_light_B.png" alt="ライトB" width="730px" height="550px">
 				</div>
+				<div class="img-size img-8">
+					<img src="images/08_jump-dog.png" alt="犬" class="keyframe-jump jump-animation" width="1000px" height="1600px">
+				</div>
+
+				<!-- stepsアニメーション -->
+				<div id="stepsTrigger-1"></div>
+				<div id="stepsTrigger-2"></div>
+				<div id="stepsTrigger-3"></div>
+				<div id="stepsTrigger-4"></div>
+				<div id="stepsTrigger-5"></div>
 
 				<!-- リンク一覧 -->
 				<ul class="obj-link">
@@ -91,5 +106,10 @@
 		</footer>
 
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+	<script src="js/common.js"></script>
+
 </body>
 </html>

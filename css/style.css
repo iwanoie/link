@@ -152,28 +152,71 @@ body {
 }
 
 /* リンク */
-.obj-link p {
+.link-item {
+	position: absolute;
+	/* box-shadow: 0px 4px 0px 6px rgb(2, 177, 86);
+	background-color: white;
+	border-radius: 15px; */
+	/* padding: 5px 10px; */
+}
+.link-item a {
 	color: rgb(2, 177, 86);
 	font-size: 16px;
 	font-weight: bold;
 	letter-spacing: 2px;
 	text-align: center;
-	width: 200px;
+	width: 220px;
+	/* ホバーアニメーション用↓ */
+	position: relative;
+	z-index: 1;
+    /*ボタンの形状*/	
+    display: inline-block;
+	line-height: 35px;
 }
 @media screen and (min-width: 768px) {
-	.obj-link p {
+	.link-item a {
 		font-size: 20px;
 		letter-spacing: 3px;
-		width: 250px;
+		width: 230px;
+		padding:0 15px;
 		}
 }
-.link-item {
-	position: absolute;
-	box-shadow: 0px 4px 0px 6px rgb(2, 177, 86);
+.link-item a::before {
+	content:'';
+    /*絶対配置で丸の位置を決める*/
+	position:absolute;
+	left:0;
+	bottom: 0;
+	z-index: -1;
+    /*丸の形状*/
+	width:220px;
+	height:35px;
 	background-color: white;
-	border-radius: 15px;
-	padding: 5px 10px;
+	box-shadow: 0px 4px 0px 6px rgb(2, 177, 86);
+	border-radius:25px;
+    /*アニメーションの指定*/
+    transition:.3s ease-out;
 }
+@media screen and (min-width: 768px) {
+	.link-item a::before {
+		width:260px;
+	}
+}
+.link-anime-border:hover::before {
+	bottom: 0;
+	height: 0;
+}
+.link-anime-circle:hover::before {
+	width: 110px;
+	margin: 0 55px;
+}
+@media screen and (min-width: 768px) {
+	.link-anime-circle:hover::before {
+		width: 140px;
+		margin: 0 60px;
+	}
+}
+
 .link-1 {
 	top: 38%;
 	right: 8%;

@@ -2,7 +2,7 @@
 //テキストのカウントアップ+バーの設定
 var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
-	duration: 1800,//時間指定(1000＝1秒)
+	duration: 1500,//時間指定(1000＝1秒)
 	strokeWidth: 0.5,//進捗ゲージの太さ
 	color: '#fff',//進捗ゲージのカラー
 	trailWidth: 0.5,//ゲージベースの線の太さ
@@ -42,6 +42,10 @@ $(window).on('load', function() {
 				// mobileの場合
 				// 犬表示
 				$('.img-8').addClass('fadeIn');
+				// ライト点灯
+				$('.light-anime').addClass('fadeIn light-on');
+				// 背景色変更
+				$('.obj-2').addClass('color-change');
 			}
 			// 足跡第三弾
 			stepsAnime($('#stepsTrigger-3'));
@@ -53,12 +57,20 @@ $(window).on('load', function() {
 						// tabletの場合
 						// 犬表示
 						$('.img-8').addClass('fadeIn');
+						// ライト点灯
+						$('.light-anime').addClass('fadeIn light-on');
+						// 背景色変更
+						$('.obj-2').addClass('color-change');
 					}
 					// 足跡第五弾
 					stepsAnime($('#stepsTrigger-5'));
 					setTimeout(function() {
 						// 犬表示
 						$('.img-8').addClass('fadeIn');
+						// ライト点灯
+						$('.light-anime').addClass('fadeIn light-on');
+						// 背景色変更
+						$('.obj-2').addClass('color-change');
 					},1000);
 				},1500);
 			},1500);

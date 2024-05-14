@@ -15,11 +15,11 @@ a {
 }
 /* フォント */
 body {
-	font-family: "Cabin", sans-serif;
+	font-family: 'Cabin', sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-	font-variation-settings: "wdth" 100;
+	font-variation-settings: 'wdth' 100;
 }
 
 /* スタイル */
@@ -150,14 +150,46 @@ body {
 		width: 130px;
 	}
 }
+/* ライト点灯アニメーション */
+.light-on {
+	position: absolute;
+	background-color: rgba(255, 221, 0, 0.8);
+	border-radius: 60px;
+	box-shadow: 0px 0px 35px 35px rgba(255, 221, 0, 0.8);
+	opacity: 0;
+}
+.img-6 .light-on {
+	width: 35px;
+	height: 35px;
+	top: 60px;
+	right: 7px;
+}
+@media screen and (min-width: 768px) {
+	.img-6 .light-on {
+		width: 55px;
+		height: 55px;
+		top: 95px;
+		right: 10px;
+	}
+}
+.img-7 .light-on {
+	width: 40px;
+	height: 40px;
+	top: 10%;
+	right: 65px;
+}
+@media screen and (min-width: 768px) {
+	.img-7 .light-on {
+		width: 60px;
+		height: 60px;
+		top: 10%;
+		right: 93px;
+	}
+}
 
 /* リンク */
 .link-item {
 	position: absolute;
-	/* box-shadow: 0px 4px 0px 6px rgb(2, 177, 86);
-	background-color: white;
-	border-radius: 15px; */
-	/* padding: 5px 10px; */
 }
 .link-item a {
 	color: rgb(2, 177, 86);
@@ -169,8 +201,8 @@ body {
 	/* ホバーアニメーション用↓ */
 	position: relative;
 	z-index: 1;
-    /*ボタンの形状*/	
-    display: inline-block;
+	/*ボタンの形状*/	
+	display: inline-block;
 	line-height: 35px;
 }
 @media screen and (min-width: 768px) {
@@ -182,24 +214,24 @@ body {
 		}
 }
 .link-item a::before {
-	content:'';
-    /*絶対配置で丸の位置を決める*/
-	position:absolute;
-	left:0;
+	content: '';
+	/*絶対配置で丸の位置を決める*/
+	position: absolute;
+	left: 0;
 	bottom: 0;
 	z-index: -1;
-    /*丸の形状*/
-	width:220px;
-	height:35px;
+	/*丸の形状*/
+	width: 220px;
+	height: 35px;
 	background-color: white;
 	box-shadow: 0px 4px 0px 6px rgb(2, 177, 86);
-	border-radius:25px;
-    /*アニメーションの指定*/
-    transition:.3s ease-out;
+	border-radius: 25px;
+	/*アニメーションの指定*/
+	transition: .3s ease-out;
 }
 @media screen and (min-width: 768px) {
 	.link-item a::before {
-		width:260px;
+		width: 260px;
 	}
 }
 .link-anime-border:hover::before {
@@ -275,23 +307,44 @@ body {
 }
 .obj-2 {
 	height: 100vh;
-	background-color: yellowgreen;
+	background-color: rgb(154 205 50);
+}
+.color-change {
+	/* 背景色変更アニメーション */
+	animation-name: colorChange;/*定義名*/
+	animation-fill-mode: forwards;/*2で開始と終了時の状態*/
+	animation-duration: 3s;/*1回分の時間の長さ*/
+	animation-iteration-count: 1;/*ループ*/
+	animation-timing-function: ease;/*進行具合*/
+	animation-delay: 0s;/*遅延開始*/
+	animation-direction: normal;/*再生方向*/
+}
+@keyframes colorChange {
+	0% {
+		background-color: rgb(154 205 50);
+	}
+	100% {
+		background-color: rgb(144 195 40);
+	}
 }
 .obj-3 {
 	height: 70vh;
-	padding: 10vh 15px 0 15px;
+	padding: 10vh 0 0 0;
 }
 @media screen and (min-width: 768px) {
 	.obj-3 {
 		height: 65vh;
-		padding: 15vh 15px 0 15px;
+		padding: 15vh 0 0 0;
 	}
 }
 @media screen and (min-width: 1280px) {
 	.obj-3 {
 		height: 70vh;
-		padding: 10vh 15px 0 15px;
+		padding: 10vh 0 0 0;
 	}
+}
+.embed {
+	padding: 0 15px;
 }
 
 /* フェードイン */
@@ -302,7 +355,7 @@ body {
 	animation-iteration-count: 1;/*ループ*/
 	animation-timing-function: ease;/*進行具合*/
 	animation-delay: 0s;/*遅延開始*/
-	animation-direction:normal;/*再生方向*/
+	animation-direction: normal;/*再生方向*/
 }
 @keyframes fadeInAnime {
 	0% {
@@ -326,8 +379,12 @@ body {
 	animation-duration: .8s;
 }
 @keyframes jump {
-	0%   { transform:translate(0%, 60px) rotateX(50deg); }
-	100% { transform:translate(0%, 0%); }
+	0% {
+		transform:translate(0%, 60px) rotateX(50deg);
+	}
+	100% {
+		transform:translate(0%, 0%);
+	}
 }
 
 /* 足跡アニメーション */
@@ -407,12 +464,12 @@ body {
 .steps{
 	width: 100px;/*1フレーム分の横幅*/
 	height: 100px;/*1フレーム分の縦幅*/
-	background: url("../images/steps/steps.png") no-repeat;/*背景画像の読み込み*/
+	background: url('../images/steps/steps.png') no-repeat;/*背景画像の読み込み*/
 	animation: stepsline 1s steps(3) forwards;
-	  /*stepsline→アニメーション名
-	  5s→アニメーションをする時間
-	  step→（）の中には、アニメーション制作コマ数-1の値を入れる（例：4コマ-1コマ=3コマ）
-	  forwards→最後の形を維持*/
+	/*stepsline→アニメーション名
+	5s→アニメーションをする時間
+	step→（）の中には、アニメーション制作コマ数-1の値を入れる（例：4コマ-1コマ=3コマ）
+	forwards→最後の形を維持*/
 	position: absolute;
 	top: 85%;
 }
@@ -448,21 +505,21 @@ footer {
 /* Loading背景画面設定 */
 #splash {
 	/* fixedで全面に固定 */
-	  position: fixed;
-	  z-index: 999;
-	  width: 100%;
-	  height: 100%;
-	  background: yellowgreen;
-	  text-align: center;
-  }
-  /* Loadingバー中央配置 */
-  #splash_text {
-	  position: absolute;
-	  top: 50%;
-	  left: 50%;
-	  z-index: 999;
-	  width: 100%;
-	  transform: translate(-50%, -50%);
-	  color: #fff;
-	  font-weight: bold;
-  }
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: yellowgreen;
+	text-align: center;
+}
+/* Loadingバー中央配置 */
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-weight: bold;
+}
